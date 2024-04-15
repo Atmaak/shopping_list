@@ -19,8 +19,6 @@ const get_all_items = async (req, res) => {
             };
         }
 
-        console.log(query)
-
         const items = await client.collection('items').find(query).toArray();
 
         res.send(items);
