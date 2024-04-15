@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const { user } = require('./route/_index')
+const { item } = require('./route/_index')
 
 require('dotenv').config()
 
@@ -11,5 +11,4 @@ app.use(cors())
 
 app.listen(8080)
 
-
-app.use("/api/user", user)
+app.use("/shoppingItem", item)
